@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root{
+
+    --Desaturated_Red: hsl(0, 36%, 70%);
+    --Soft_Red: hsl(0, 93%, 68%);
+    --Dark_Grayish_Red: hsl(0, 6%, 24%);
+    --Grad1: linear-gradient(135deg, hsl(0, 50%, 90%), hsl(0, 80%, 86%));
+    --Grad2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));    
+}
+
+body{
+
+    background-size: cover;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+.left{
+    background-image: url(/base-apparel-coming-soon-master/images/bg-pattern-desktop.svg);
+    width: 57%;
+    margin-left: 0;
+}
+.right{
+    width: 43%;
+}
+.bg-image{
+    background-image: url(/base-apparel-coming-soon-master/images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo{
+    margin: 40px 0 80px;
+    margin-left: 120px;
+}
+
+h1{
+    margin-left: 120px;
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 15px;
+    color: var(--Dark_Grayish_Red);
+    margin-bottom: 0;
+    transform: translateX(-100%);
+    line-height: 1.1;
+    animation: comein 0.5s ease forwards;
+}
+
+@keyframes comein{
+    to{
+        transform: translateX(0);
+    }
+}
+
+h1 span {
+    color: var(--Desaturated_Red);
+    font-weight: 300;
+}
+
+p {
+    color: var(--Desaturated_Red);
+    line-height: 23px;
+    max-width: 450px;
+    margin: 25px 120px 50px;
+    transform: translateX(100%);
+    opacity: 0;
+    animation: comeout 0.5s ease forwards;
+}
+
+@keyframes comeout{
+    to{
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+form{
+    margin-left: 120px;
+    border-top: 150px;
+    position: relative;
+    max-width: 450px;
+    animation: comein 0.5s ease forwards;
+    transform: translateX(-100%);
+}   
+
+input {
+	background-color: transparent;
+	border: 1px solid var(--Desaturated_Red);
+	border-radius: 50px;
+	font-size: 16px;
+	padding: 0px 30px;
+	height: 55px;
+	width: 100%;
+}
+
+input::placeholder{
+    color: var(--Desaturated_Red);
+}
+
+input:focus{
+    border-width: 1px;
+    outline: none;
+    box-shadow: 0px 0px 10px hsla(0, 80%, 86%, 0.767);
+}
+
+button{
+    background-image: var(--Grad2);
+    box-shadow: 2px 5px 10px hsla(0, 80%, 86%, 0.767);
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    width: 100px;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    height: 55px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-image: var(--Grad1);
+
+}
+
+input:required{
+   border: 1px solid green
+}
+
+form .error input{
+    border: 2px solid var(--Soft_Red)
+}
+
+
+.error-icon{
+    position: absolute;
+    top: 18px;
+    right:110px;
+    display: none;
+}
+
+form.error .error-icon{
+    display: block;
+}
+
+.small-error{
+    margin-left: 25px;
+    margin-top: 15px;
+    display:none;
+    color: var(--Soft_Red)
+}
+
+form.error .small-error{
+    display: block;
+}
+
+.small-success{
+    margin-left: 25px;
+    margin-top: 15px;
+    display:none;
+    color: green
+}
+form.success .small-success{
+    display: block;
+}
+
+
+.bg-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .logo{
+        margin-top: 40px;
+        margin-bottom: 60px;
+        width: 160px;
+    }
+    .left{
+        width:100%;
+        margin: 0;
+    }
+    .right{
+        display: none;
+    }
+    p{
+        opacity: 1;
+        margin: 40px auto;
+        transform: translateX(0);
+        align-items: center;
+        animation: none;
+        text-align: center;
+    }
+    h1{
+        transform: translateX(0);
+        animation: none;
+        text-align: center;
+        margin: 40px auto;
+    }
+    form{
+        transform: translateX(0);
+        animation: none;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .bg-mobile{
+        display: block;
+        width: 100%;
+
+       
+    }
+
+}
