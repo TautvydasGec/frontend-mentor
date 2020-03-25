@@ -102,3 +102,10 @@ footer a:link{
 footer a:visited{
     color: var(--main-color);
 }
+
+@media screen and (max-width: 800px){
+    footer{
+        font-size: 14px;
+    }
+
+}
