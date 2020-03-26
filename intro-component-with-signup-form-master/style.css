@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark_Blue: hsl(249, 10%, 26%);
+    --Grayish_Blue: hsl(246, 25%, 77%);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background-image: url(/intro-component-with-signup-form-master/images/bg-intro-desktop.png);
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--Red);
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1440px;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+
+.container > div {
+	flex: 1;
+	padding: 0 20px;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+p{
+    max-width: 500px;
+    color: white;
+}
+
+.try{
+    background-color: var(--Blue);
+    color: white;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 0 8px 0px rgba(0, 0, 0, 0.11);
+    margin-bottom: 30px;
+}
+
+.try span{
+    font-weight: 400;
+    color: var(--Grayish_Blue);
+}
+
+.box{
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+	padding: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.form-control {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.form-control small {
+	color: hsl(0, 100%, 74%);
+	font-weight: 600;
+	position: absolute;
+	bottom: -24px;
+	right: 0;
+	opacity: 1;
+	text-align: right;
+}
+
+input{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    width: 100%;
+    padding: 15px 25px;
+    border: 1px solid var(--Grayish_Blue);
+    border-radius: 5px;
+    font-size: 600;
+}
+
+input:focus{
+    border-color: var(--Blue);
+    outline: none;
+}
+
+.form-control.error input{
+    border: 2px solid var(--Red);
+    color: var(--Red)
+}
+
+.form-control img {
+	opacity: 0;
+	position: absolute;
+	 top: 50%; 
+	right: 15px;
+	transform: translateY(-50%);
+	height: 20px;
+}
+
+.form-control.error img {
+	opacity: 1;
+}
+
+button{
+    color: white;
+    border: none;
+    background-color: var(--Green);
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 0 rgba(42, 160, 109, 0.767);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:active{
+    box-shadow: 0 0 0 rgba(42, 160, 109, 0.767);
+    transform: translateY(2px);
+}
+
+small{
+    color: var(--Grayish_Blue);
+}
+
+small a{
+    color: var(--Red);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+    h1{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        margin: auto;
+    }
+}
