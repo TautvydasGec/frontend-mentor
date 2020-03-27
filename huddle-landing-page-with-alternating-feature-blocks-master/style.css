@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:600&display=swap');
+:root{  
+--Pink: hsl(322, 100%, 66%);
+--Very-Pale-Cyan: hsl(193, 100%, 96%);
+--Very-Dark-Cyan: hsl(192, 100%, 9%);
+--Grayish-Blue: hsl(208, 11%, 55%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 , h3{
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    padding: 0 50px;
+    margin: 0 0;
+    width: 1440px;
+    max-width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex >div{
+    flex: 1;
+}
+
+header{
+    background-image: url(./images/bg-hero-desktop.svg);
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--Very-Pale-Cyan);
+    padding: 40px 25px;
+    margin-bottom: 100px;
+    height: 100%;
+}
+
+nav{
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+nav .logo{
+    max-block-size: 30px;
+}
+
+.header-content{
+    padding-right: 40px;
+    transform: translateY(15%);
+}
+
+.header-content h1{
+    max-width: 400px;
+}
+
+.header-content p{
+    max-width: 500px;
+}
+
+/* .mockup{
+    max-height: 454px;
+    margin-left: auto;
+} */
+
+.btn{
+    border: none;
+    border-radius: 25px;
+    height: 45px;
+    padding: 0 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    box-shadow: 0px 0px 10px  rgba(0,0,0,0.18);
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0px 0px 12px  rgba(0,0,0,0.5);
+}
+
+.btn:active{
+    transform: scale(0.99);
+}
+
+.btn-primary{
+    background-color: var(--Pink);
+    color: white;
+}
+
+.btn-secondary{
+    background-color: white;
+    color: var(--Very-Dark-Cyan);
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px  rgba(0,0,0,0.12);
+    border-radius: 15px;
+    margin: 30px auto 0px auto ;
+    padding: 20px;
+    height: 400px;
+    background-color: white;
+}
+
+.box img{
+    max-block-size: 350px;
+}
+
+.box > div{
+    padding: 0 80px 0 80px;
+    color: var(--Very-Dark-Cyan);
+}
+
+h3{
+    font-size: 25px;
+}
+
+.box > div p {
+    max-width: 450px;
+    color: var(--Grayish-Blue);
+}
+
+.card{
+    height: 200px;
+    width: 60%;
+    display: inline-block;
+    background-color: white;
+}
+
+.center{
+    text-align: center;
+    z-index: 1;
+    transform: translateY(90px);
+}
+
+.btn-big{
+    max-width: 300px;
+    max-height: 52px;
+    font-size: 1 vw;
+}
+
+.align{
+    align-items: flex-start;
+}
+
+footer{
+    background-color: var(--Very-Dark-Cyan);
+    color: white;
+    padding: 125px 0 55px;
+    font-size: 16px;
+}
+
+footer ul{
+    padding: 10px;
+    list-style-type: none;
+}
+
+footer ul li{
+    margin-bottom: 20px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer1{
+    max-width: 300px;
+}
+
+.icons{
+    border: 1px solid #fff;
+	border-radius: 50%;
+	color: #fff;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+	height: 40px;
+	width: 40px;
+	text-decoration: none;
+}
+
+.icons:hover{
+    transform: scale(1.1);
+}
+
+footer p{
+    text-align: right;
+}
+
+footer small{
+    position: absolute;
+    right: 20px;
+}
+
+@media screen and (max-width: 800px){
+	body {
+		text-align: center;
+    }
+	nav.flex {
+		flex-direction: row;
+    }
+    
+    h1{
+        margin: auto;
+    }
+
+    header p{
+        margin: 20px auto;
+    }
+
+	.mockup {
+        margin-top: 80px;
+        margin-bottom: 40px;
+		margin-left: 0;
+		width: 100%;
+    }
+    
+    .box{
+        width: 90%;
+    }
+
+	.flex {
+		flex-direction: column;
+    }
+    
+    .card{
+        width: 90%;
+    }
+
+	.mobile-reverse {
+		flex-direction: column-reverse;
+    }
+
+    footer{
+        text-align: left;
+
+    }
+
+	footer ul {
+		padding: 0;
+		width: 100%;
+	}
+    
+    #icon-div{
+        flex-direction: row;
+        position: relative;
+        text-align: center;
+        right: -40%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    footer small{
+        right: 25%;
+    }
+}

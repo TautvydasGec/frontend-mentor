@@ -11,6 +11,9 @@ const projects = [
 	{
 		name: 'single-price-grid-component-master',
 	},
+	{
+		name: 'huddle-landing-page-with-alternating-feature-blocks-master',
+	},
 
 ];
 
