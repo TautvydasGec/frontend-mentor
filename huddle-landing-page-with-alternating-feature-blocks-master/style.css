@@ -213,16 +213,35 @@ footer small{
 	body {
 		text-align: center;
     }
+
 	nav.flex {
 		flex-direction: row;
+    }
+
+    nav{
+        padding: 20px 0px;
+        margin-bottom: -20px;
     }
     
     h1{
         margin: auto;
     }
 
+    .btn{
+        font-size: 2.7vw;
+    }
+
+    header{
+        padding: 0;
+    }
+
     header p{
-        margin: 20px auto;
+        margin: 10px auto;
+    }
+
+    nav .logo{
+        min-block-size: 15px;
+        padding-right: 50px;
     }
 
 	.mockup {
@@ -234,6 +253,16 @@ footer small{
     
     .box{
         width: 90%;
+        padding:0 0 5px 0;
+    }
+
+    .box>div{
+        min-width: 100%;
+        padding: 0 10px 0 10px;
+    }
+
+    .box p{
+        font-size: 3vw;
     }
 
 	.flex {
